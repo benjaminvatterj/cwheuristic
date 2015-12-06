@@ -12,9 +12,7 @@ The Clarke and Wright algorithm is pretty simple and standard. The truck assignm
 1.	For each route we create a list of trucks capable of transporting the demand.
 2.	If a route has a possible truck that isn’t already in use by another route, it is assigned to it.
 3.	If there is no free truck for the route a pseudo-matrix of 1 and 0 is created where the rows are the trucks and the columns are the routes. A 1 is assigned if the route and truck can be matched.
-4.	Then we simulate a pivoting process on the columns of the matrix until a strictly positive diagonal is formed, giving a solution for the problem. (This pivoting is done by
-
-deleting and recreating rows and columns of the matrix, due to the mathematical restrictions of php. Also a custom Matrix class is created for simplicity).
+4.	Then we simulate a pivoting process on the columns of the matrix until a strictly positive diagonal is formed, giving a solution for the problem. (This pivoting is done by deleting and recreating rows and columns of the matrix, due to the mathematical restrictions of php. Also a custom Matrix class is created for simplicity).
 
 Notice that no client node can be duplicate. we give an example of how to correct this in data.php.
 
